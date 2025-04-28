@@ -1,12 +1,15 @@
-🌟 Tour & Travel Booking Website 🌟
+<h1>🌟 Tour & Travel Booking Website 🌟</h1>
+<br>
 A Collaborative Project using the MERN Stack
-
+<br>
 📜 Description
 Welcome to the Tour & Travel Booking Website — a fully functional web application created by a team of 5 passionate developers.
 This project simplifies the process of exploring, booking, and managing travel packages across the world. It offers a seamless and user-friendly experience for both travelers and travel agencies.
 
 Throughout this project, we used the powerful MERN stack — MongoDB, Express.js, React.js, and Node.js — to develop a dynamic, scalable, and secure web application.
 
+
+<br>
 📝 Table of Contents
 Technologies Used
 
@@ -35,6 +38,8 @@ Cloud Services: Cloudinary / Firebase (for image uploads) (optional if used)
 
 Tools: GitHub, Postman, VS Code, Render/Vercel (for deployment)
 
+
+<br>
 ✨ Key Features
 Browse and book travel packages
 
@@ -54,15 +59,17 @@ Real-time booking confirmation
 
 Image upload for packages
 
+
+<br>
 👥 Team Members
 A huge thanks to our amazing team who contributed their skills to bring this project to life:
 
-[Your Name 1] - 
+[CHANUKA RANDITHA] - https://github.com/Chanuka999
 
-[Your Name 2] -
+[BUDDHIMA DISHANTHA] -https://github.com/Buddhima999
 
-[Your Name 3] -
+[MADHAWA KAVINDU] -https://github.com/Madhawakavindu
 
-[Your Name 4] -
+[INDUWARA LAKSHAN] -https://github.com/induwara20014
 
-[Your Name 5] -
+[ISURU SAMPATH] -https://github.com/IsuruSampathRanasinghe
