@@ -64,6 +64,13 @@ Image upload for packages
 👥 Team Members
 A huge thanks to our amazing team who contributed their skills to bring this project to life:
 
+<p align="center">
+  <a href="https://dragon.edu.lk/sipsuru">
+     <img src="https://github.com/user-attachments/assets/fa7b8388-482c-4706-af60-635456dfe380" alt="Contributions">
+  </a>
+</p>
+
+
 [CHANUKA RANDITHA] - https://github.com/Chanuka999
 
 [BUDDHIMA DISHANTHA] -https://github.com/Buddhima999
