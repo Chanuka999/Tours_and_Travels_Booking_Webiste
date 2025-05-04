@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
+import "./Header.css";
 
 import logo from "../../assest/images/logo.png";
 
@@ -10,7 +11,7 @@ const nav_links = [
     display: "Home",
   },
   {
-    path: "#",
+    path: "/about",
     display: "About",
   },
   {
@@ -32,7 +33,15 @@ const Header = () => {
               <ul className="menu d-flex align-items-center gap-5">
                 {nav_links.map((item, index) => (
                   <li className="nav_item" key={index}>
-                    <NavLink to={item.path}> {item.display}</NavLink>
+                    <NavLink
+                      to={item.path}
+                      className={(navClass) =>
+                        navClass.isActive ? "active_link" : ""
+                      }
+                    >
+                      {" "}
+                      {item.display}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -46,6 +55,10 @@ const Header = () => {
                   <Link to="/register">Register</Link>
                 </Button>
               </div>
+
+              <span className="mobile_menu">
+                <i class="ri-menu-line"></i>
+              </span>
             </div>
           </div>
         </Row>
