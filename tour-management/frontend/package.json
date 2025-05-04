@@ -9,9 +9,14 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
+    "bootstrap": "^5.3.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.3",
     "react-scripts": "5.0.1",
+    "reactstrap": "^9.2.3",
+    "remixicon": "^4.6.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
