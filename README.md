@@ -64,6 +64,9 @@ Image upload for packages
 👥 Team Members
 A huge thanks to our amazing team who contributed their skills to bring this project to life:
 
+Want to see all the contributors? Check out the full list on the [Contributors page](https://github.com/Chanuka999/Tours_and_Travels_Booking_Webiste/graphs/contributors).
+
+
 [CHANUKA RANDITHA] - https://github.com/Chanuka999
 
 [BUDDHIMA DISHANTHA] -https://github.com/Buddhima999
