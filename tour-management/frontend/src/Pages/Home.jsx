@@ -1,4 +1,7 @@
 import React from "react";
+
+import FeaturedTourList from "../Component/Featured-tours/FeaturedTourList";
+
 import "../styles/home.css";
 
 import { Container, Row, Col } from "reactstrap";
@@ -8,6 +11,7 @@ import heroVideo from "../assest/images/hero-video.mp4";
 import Subtitle from "../Shared/Subtitle";
 import worldImg from "../assest/images/world.png";
 import Searchbar from "../Shared/Searchbar";
+
 
 const Home = () => {
   return (
