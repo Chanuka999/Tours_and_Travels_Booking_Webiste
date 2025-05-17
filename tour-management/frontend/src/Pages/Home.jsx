@@ -12,6 +12,9 @@ import Subtitle from "../Shared/Subtitle";
 import worldImg from "../assest/images/world.png";
 import Searchbar from "../Shared/Searchbar";
 import ServiceList from "../services/ServiceList";
+import experienceImg from "../assest/images/experience.png";
+import MasonryImageGallery from "../Component/image-gallery/MasonryImageGallery";
+import Testimonial from "../Component/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -76,10 +79,82 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="mb-5">
-              <Subtitle subtitle={"Explore"} />
+              <Subtitle Subtitle={"Explore"} />
               <h2 className="featured_tour-title">Our featured tours</h2>
             </Col>
             <FeaturedTourList />
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6">
+              <div className="experience__content">
+                <Subtitle Subtitle={"Experience"} />
+                <h2>
+                  With our all experience <br />
+                  we will serve you
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Impedit
+                  <br /> corrupti iure explicabo quod dolores obcaecati facere
+                  voluptatum, totam iusto minus molestiae recusandae aperiam
+                  eius error delectus placeat ipsa neque praesentium!
+                </p>
+              </div>
+              <div className="counter__wrapper d-flex align-items-center gap-5">
+                <div className="counter__box">
+                  <span>12k+</span>
+                  <h6>Successful Trip</h6>
+                </div>
+                <div className="counter__box">
+                  <span>2k+</span>
+                  <h6>Regular clients</h6>
+                </div>
+                <div className="counter__box">
+                  <span>15k</span>
+                  <h6>Years experience</h6>
+                </div>
+              </div>
+            </Col>
+            <Col lg="6">
+              <div className="experience__img">
+                <img src={experienceImg} alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <Subtitle Subtitle={"Gallery"} />
+              <h2 className="gallery__title">
+                Visit our customers tour gallery
+              </h2>
+            </Col>
+            <Col lg="12">
+              <MasonryImageGallery />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <Subtitle Subtitle={"Fans Love"} />
+              <h2 className="testimoial__title">what out fans say about</h2>
+            </Col>
+            <Col lg="12">
+              <Testimonial />
+            </Col>
           </Row>
         </Container>
       </section>
