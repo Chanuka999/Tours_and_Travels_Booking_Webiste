@@ -11,7 +11,7 @@ import heroVideo from "../assest/images/hero-video.mp4";
 import Subtitle from "../Shared/Subtitle";
 import worldImg from "../assest/images/world.png";
 import Searchbar from "../Shared/Searchbar";
-
+import ServiceList from "../services/ServiceList";
 
 const Home = () => {
   return (
@@ -67,6 +67,7 @@ const Home = () => {
               <h5 className="services__subtitle">What we serve</h5>
               <h1 className="services__title">We offer our best services</h1>
             </Col>
+            <ServiceList />
           </Row>
         </Container>
       </section>
@@ -74,11 +75,11 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg='12' className="mb-5">
-              <Subtitle subtitle={'Explore'}/>
+            <Col lg="12" className="mb-5">
+              <Subtitle subtitle={"Explore"} />
               <h2 className="featured_tour-title">Our featured tours</h2>
             </Col>
-            <FeaturedTourList/>
+            <FeaturedTourList />
           </Row>
         </Container>
       </section>
