@@ -88,3 +88,11 @@
 .booking__btn a:hover {
   color: #fff;
 }
+
+.tour__list {
+  display: flex;
+  flex-wrap: wrap;
+  /*gap: 0.1rem;*/
+  justify-content: center;
+  margin-top: 2rem;
+}
