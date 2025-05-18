@@ -46,7 +46,7 @@ const Testimonial = () => {
         <div className="d-flex align-items-center gap-4 mt-3">
           <img src={ava01} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h5 className="mb-0 mt-3">john Doe</h5>
+            <h5 className="mb-0 mt-3">Lia Franklin</h5>
             <p>Customer</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Testimonial = () => {
         <div className="d-flex align-items-center gap-4 mt-3">
           <img src={ava02} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h5 className="mb-0 mt-3">john Doe</h5>
+            <h5 className="mb-0 mt-3">John Doe</h5>
             <p>Customer</p>
           </div>
         </div>
@@ -79,6 +79,22 @@ const Testimonial = () => {
           <img src={ava03} className="w-25 h-25 rounded-2" alt="" />
           <div>
             <h5 className="mb-0 mt-3">john Doe</h5>
+            <p>Customer</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="testimonial py-4 px-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          fuga accusantium delectus sunt deleniti molestiae alias. Saepe at
+          blanditiis enim. Hic maiores ducimus repellat voluptatum nam.
+          Accusantium et modi quo.
+        </p>
+        <div className="d-flex align-items-center gap-4 mt-3">
+          <img src={ava02} className="w-25 h-25 rounded-2" alt="" />
+          <div>
+            <h5 className="mb-0 mt-3">John Doe</h5>
             <p>Customer</p>
           </div>
         </div>

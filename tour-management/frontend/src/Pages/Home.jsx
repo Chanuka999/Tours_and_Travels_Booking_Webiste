@@ -15,6 +15,7 @@ import ServiceList from "../services/ServiceList";
 import experienceImg from "../assest/images/experience.png";
 import MasonryImageGallery from "../Component/image-gallery/MasonryImageGallery";
 import Testimonial from "../Component/Testimonial/Testimonial";
+import Newsletteer from "../Shared/Newsletteer";
 
 const Home = () => {
   return (
@@ -158,6 +159,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      {/*===========testimonial section end */}
+      <Newsletteer/>
     </>
   );
 };
