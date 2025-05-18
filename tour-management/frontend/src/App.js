@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Layout from "./Component/Layout/Layout";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-     
-      </header>
-    </div>
-  );
+
+  return <Layout />;
+
 }
 
 export default App;
