@@ -16,7 +16,7 @@ const Tour = () => {
      <section>
       <Container>
         <Row>
-         
+        hi
         </Row>
       </Container>
      </section>
