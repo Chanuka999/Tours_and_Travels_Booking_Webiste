@@ -37,7 +37,6 @@ const quick_links2 = [
 ];
 
 const Footer = () => {
-<<<<<<< HEAD
 
   return (
     <footer className="footer">
@@ -142,9 +141,6 @@ const Footer = () => {
               </footer>
   );
 
-=======
-  return <div></div>;
->>>>>>> 5a7e80a2f398b4b6adb08cfbb01f84c6d0c523b5
 };
 
 export default Footer;
