@@ -98,7 +98,7 @@ const Footer = () => {
                 <i class="ri-map-pin-line"></i>
                
                 </span>
-                addresses:
+                address:
               </h6>
 
               <p className="mb-0">Eknaligoda,kuruvita,ratnapura</p>
