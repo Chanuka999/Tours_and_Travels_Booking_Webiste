@@ -1,7 +1,27 @@
-import React from "react";
+import React from "react"; 
+import CommonSection from "../Shared/CommonSection";
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Tour = () => {
-  return <div></div>;
+  return (
+     <>
+     <CommonSection title={"All Tours"}/>
+     <section>
+      <Container>
+        <Row>
+          <searchBar/>
+        </Row>
+      </Container>
+     </section>
+     <section>
+      <Container>
+        <Row>
+         
+        </Row>
+      </Container>
+     </section>
+     </>
+  );
 };
 
 export default Tour;
