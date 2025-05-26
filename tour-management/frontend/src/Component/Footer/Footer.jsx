@@ -38,6 +38,7 @@ const quick_links2 = [
 
 const Footer = () => {
 
+
   return (
     <footer className="footer">
       <Container>
@@ -45,8 +46,7 @@ const Footer = () => {
           <Col lg="3">
           <div className="logo">
             <img src={logo} alt=" "/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing. Eius harum cupiditate aliquid in doloremque assumenda, veritatis eveniet magnam reprehenderit. Eius illo deleniti eligendi, nobis aperiam nisi. Nesciunt, distinctio dolores?</p>
-            
+
             <div className="social__links d-flex align-items-center gap-4">
               <span>
                 <Link to='#'><i class="ri-youtube-line"></i> </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <i class="ri-map-pin-line"></i>
                
                 </span>
-                addresses:
+
               </h6>
 
               <p className="mb-0">Eknaligoda,kuruvita,ratnapura</p>
