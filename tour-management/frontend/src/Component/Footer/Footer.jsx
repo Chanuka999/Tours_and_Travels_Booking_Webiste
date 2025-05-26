@@ -45,7 +45,7 @@ const Footer = () => {
           <Col lg="3">
           <div className="logo">
             <img src={logo} alt=" "/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius harum porro cupiditate aliquid in doloremque assumenda, veritatis eveniet magnam reprehenderit. Eius illo deleniti eligendi, nobis aperiam nisi. Nesciunt, distinctio dolores?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing. Eius harum cupiditate aliquid in doloremque assumenda, veritatis eveniet magnam reprehenderit. Eius illo deleniti eligendi, nobis aperiam nisi. Nesciunt, distinctio dolores?</p>
             
             <div className="social__links d-flex align-items-center gap-4">
               <span>
