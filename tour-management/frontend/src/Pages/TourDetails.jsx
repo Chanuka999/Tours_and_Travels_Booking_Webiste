@@ -3,10 +3,11 @@ import '../styles/tour-details.css'
 import { Container, Row,Col, Form,ListGroup } from 'reactstrap'
 import { useParams } from "react-router-dom";
 import tourData from '../assest/data/tours'
+import Newsletteer from "../Shared/Newsletter";
 
 const TourDetails = () => {
 
-  const {id} = useParms();
+  const {id} = useParams();
 
   const tour = tourData.find(tour => tour.id === id)
 
@@ -27,6 +28,7 @@ const TourDetails = () => {
         </Row>
       </Container>
     </section>
+    <Newsletteer/>
   </>
 };
 
