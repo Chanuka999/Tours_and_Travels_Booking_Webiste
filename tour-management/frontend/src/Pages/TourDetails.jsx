@@ -6,7 +6,7 @@ import tourData from "../assest/data/tours";
 import Newsletteer from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assest/images/avatar.jpg";
-
+import Booking from "../Component/Booking/Booking.jsx";
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
@@ -53,7 +53,7 @@ const TourDetails = () => {
                         class="ri-star-s-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>
-                      {calculateAvgRating === 0 ? null : avgRating}
+                      {avgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not rated"
                       ) : (
@@ -155,7 +155,9 @@ const TourDetails = () => {
               </div>
             </Col>
 
-            <Col lg="4"></Col>
+            <Col lg="4">
+            <Booking tour={tour} avgRating={avgRating}/>
+            </Col>
           </Row>
         </Container>
       </section>
