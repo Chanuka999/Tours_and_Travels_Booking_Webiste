@@ -69,7 +69,7 @@ const handleClick = e=>{
             
             </Button>
           </Form>
-          <p>Already have an account? <Link to='/login'>Login</Link></p>
+          <p>Already have an accounts? <Link to='/login'>Login</Link></p>
         </div>
         </div>
         </Col>
