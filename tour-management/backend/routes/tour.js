@@ -9,12 +9,13 @@ import {
   getTourCount,
   updateTour,
 } from "../controllers/tourController.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
-router.post("/", createTour);
-router.put("/:id", updateTour);
-router.delete("/:id", deleteTour);
+router.post("/", verifyAdmin, createTour);
+router.put("/:id", verifyAdmin, updateTour);
+router.delete("/:id", verifyAdmin, deleteTour);
 router.get("/:id", getSingleTour);
 router.get("/", getAllTour);
 

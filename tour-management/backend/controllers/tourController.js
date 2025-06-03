@@ -61,7 +61,7 @@ export const deleteTour = async (req, res) => {
 export const getSingleTour = async (req, res) => {
   const id = req.params.id;
   try {
-    const tour = await Tour.findByIdAndDelete(id);
+    const tour = await Tour.findByIdAndDelete(id).populate("reviews");
     res.status(200).json({
       success: true,
       message: "Successfully deleted",
@@ -82,6 +82,7 @@ export const getAllTour = async (req, res) => {
 
   try {
     const tours = await Tour.find({})
+      .populate("reviews")
       .skip(page * 8)
       .limit(8);
 
@@ -109,7 +110,7 @@ export const getTourBySearch = async (req, res) => {
       city,
       distance: { $gte: distance },
       maxGroupSize: { $gte: maxGroupSize },
-    });
+    }).populate("reviews");
 
     res.status(200).json({
       success: true,
@@ -126,7 +127,9 @@ export const getTourBySearch = async (req, res) => {
 
 export const getFeaturedTour = async (req, res) => {
   try {
-    const tours = await Tour.find({ featured: true }).limit(8);
+    const tours = await Tour.find({ featured: true })
+      .populate("reviews")
+      .limit(8);
 
     res.status(200).json({
       success: true,
