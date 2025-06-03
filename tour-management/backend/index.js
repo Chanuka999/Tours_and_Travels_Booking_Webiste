@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import tourRoute from "./routes/tour.js";
+import userRoute from "./routes/users.js";
+//import authRoute from "./routes/auth.js";
 
 const app = express();
 const port = 4000;
@@ -28,7 +30,9 @@ connection.once("open", () => {
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+//app.use("/auth", authRoute);
 app.use("/tours", tourRoute);
+app.use("/users", userRoute);
 
 app.get("/", (req, res) => {
   res.send("API is running");
