@@ -7,12 +7,21 @@ import Newsletteer from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assest/images/avatar.jpg";
 import Booking from "../Component/Booking/Booking.jsx";
+
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
 
   const tour = tourData.find((tour) => tour.id === id);
+
+  if (!tour) {
+    return (
+      <Container className="text-center mt-5">
+        <h2>Tour not found</h2>
+      </Container>
+    );
+  }
 
   const {
     photo,
@@ -33,6 +42,7 @@ const TourDetails = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
+    // You can handle form submission logic here
   };
 
   return (
@@ -42,7 +52,14 @@ const TourDetails = () => {
           <Row>
             <Col lg="8">
               <div className="tour__content">
-                <img src={photo} alt="" />
+                <img
+                  src={
+                    photo.startsWith("/")
+                      ? process.env.PUBLIC_URL + photo
+                      : photo
+                  }
+                  alt={title}
+                />
 
                 <div className="tour__info">
                   <h2>{title}</h2>
@@ -50,7 +67,7 @@ const TourDetails = () => {
                   <div className="d-flex align-items-center gap-5">
                     <span className="tour__rating d-flex align-items-center gap-1">
                       <i
-                        class="ri-star-s-fill"
+                        className="ri-star-s-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>
                       {avgRating === 0 ? null : avgRating}
@@ -62,23 +79,23 @@ const TourDetails = () => {
                     </span>
 
                     <span>
-                      <i class="ri-map-pin-user-line"></i> {address}
+                      <i className="ri-map-pin-user-line"></i> {address}
                     </span>
                   </div>
 
                   <div className="tour__extra-details">
                     <span>
-                      <i class="ri-map-pin-2-line"></i> {city}
+                      <i className="ri-map-pin-2-line"></i> {city}
                     </span>
                     <span>
-                      <i class="ri-money-dollar-circle-line"></i> ${price} / per
-                      person
+                      <i className="ri-money-dollar-circle-line"></i> ${price} /
+                      per person
                     </span>
                     <span>
-                      <i class="ri-map-pin-time-line"></i> {distance} km
+                      <i className="ri-map-pin-time-line"></i> {distance} km
                     </span>
                     <span>
-                      <i class="ri-group-line"></i> {maxGroupSize} people
+                      <i className="ri-group-line"></i> {maxGroupSize} people
                     </span>
                   </div>
                   <h5>Description</h5>
@@ -90,28 +107,19 @@ const TourDetails = () => {
 
                   <Form onSubmit={submitHandler}>
                     <div className="d-flex align-items-center gap-3 mb-4 rating__group">
-                      <span onClick={() => setTourRating(1)}>
-                        1<i class="ri-star-s-fill"></i>
-                      </span>
-                      <span onClick={() => setTourRating(2)}>
-                        2<i class="ri-star-s-fill"></i>
-                      </span>
-                      <span onClick={() => setTourRating(3)}>
-                        3<i class="ri-star-s-fill"></i>
-                      </span>
-                      <span onClick={() => setTourRating(4)}>
-                        4<i class="ri-star-s-fill"></i>
-                      </span>
-                      <span onClick={() => setTourRating(5)}>
-                        5<i class="ri-star-s-fill"></i>
-                      </span>
+                      {[1, 2, 3, 4, 5].map((num) => (
+                        <span key={num} onClick={() => setTourRating(num)}>
+                          {num}
+                          <i className="ri-star-s-fill"></i>
+                        </span>
+                      ))}
                     </div>
 
                     <div className="review__input">
                       <input
                         type="text"
                         ref={reviewMsgRef}
-                        placeholder="share your thoughts"
+                        placeholder="Share your thoughts"
                         required
                       />
                       <button
@@ -124,15 +132,11 @@ const TourDetails = () => {
                   </Form>
 
                   <ListGroup className="user__reviews">
-                    {reviews?.map((review) => (
-                      <div className="review__item">
-                        <img src={avatar} alt="" />
-
+                    {reviews?.map((review, index) => (
+                      <div className="review__item" key={index}>
+                        <img src={avatar} alt="User avatar" />
                         <div className="w-100">
-                          <div
-                            className="d-flex align-items-center 
-                            justify-content-between"
-                          >
+                          <div className="d-flex align-items-center justify-content-between">
                             <div>
                               <h5>muhib</h5>
                               <p>
@@ -143,7 +147,7 @@ const TourDetails = () => {
                               </p>
                             </div>
                             <span className="d-flex align-items-center">
-                              5<i class="ri-star-s-fill"></i>
+                              5<i className="ri-star-s-fill"></i>
                             </span>
                           </div>
                           <h6>Amazing tour</h6>
@@ -156,7 +160,7 @@ const TourDetails = () => {
             </Col>
 
             <Col lg="4">
-            <Booking tour={tour} avgRating={avgRating}/>
+              <Booking tour={tour} avgRating={avgRating} />
             </Col>
           </Row>
         </Container>
