@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assest/data/tours"; // Ensure correct path: should be `assets`, not `assest` if that's a typo
+
 import Newsletter from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assest/images/avatar.jpg"; // Confirm path
