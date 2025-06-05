@@ -14,7 +14,19 @@ const TourCard = ({ tour }) => {
     <div className="card">
       <Card>
         <div className="tour__img">
-          <img src={photo} alt="tour-img" />
+          <img
+            src={
+              photo
+                ? (typeof photo === "string"
+                    ? (photo.startsWith("/")
+                        ? process.env.PUBLIC_URL + photo
+                        : photo)
+                    : (typeof photo === "object" && photo.default ? photo.default : photo)
+                  )
+                : require("../assest/images/tour.jpg")
+            }
+            alt="tour-img"
+          />
           {featured && <span>Featured</span>}
         </div>
 
