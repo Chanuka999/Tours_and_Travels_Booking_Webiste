@@ -101,9 +101,9 @@ export const getAllTour = async (req, res) => {
 };
 
 export const getTourBySearch = async (req, res) => {
-  const city = new RegExp(req.query.city, "i");
-  const distance = parseInt(req.query.distance);
-  const maxGroupSize = parseInt(req.query.maxGroupSize);
+  const city = req.query.city ? new RegExp(req.query.city, "i") : /.*/;
+  const distance = parseInt(req.query.distance) || 0;
+  const maxGroupSize = parseInt(req.query.maxGroupSize) || 0;
 
   try {
     const tours = await Tour.find({
@@ -118,9 +118,9 @@ export const getTourBySearch = async (req, res) => {
       data: tours,
     });
   } catch (err) {
-    res.status(404).json({
+    res.status(500).json({
       success: false,
-      message: "not found",
+      message: "Server error",
     });
   }
 };

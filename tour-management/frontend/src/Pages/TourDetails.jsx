@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assest/data/tours";
+
 import Newsletter from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
-import avatar from "../assest/images/avatar.jpg";
+import avatar from "../assest/images/avatar.jpg"; // Confirm path
 import Booking from "../Component/Booking/Booking.jsx";
 
 const TourDetails = () => {
@@ -13,6 +13,7 @@ const TourDetails = () => {
   const reviewMsgRef = useRef("");
   const [tourRating, setTourRating] = useState(null);
 
+  // Convert id to string to match with string IDs in tourData
   const tour = tourData.find((tour) => tour.id === id);
 
   if (!tour) {
@@ -42,7 +43,16 @@ const TourDetails = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
-    // You can handle form submission logic here
+
+    // Show review in console for now
+    console.log({
+      message: reviewText,
+      rating: tourRating,
+    });
+
+    // Reset after submit (optional)
+    reviewMsgRef.current.value = "";
+    setTourRating(null);
   };
 
   return (
@@ -52,14 +62,7 @@ const TourDetails = () => {
           <Row>
             <Col lg="8">
               <div className="tour__content">
-                <img
-                  src={
-                    photo.startsWith("/")
-                      ? process.env.PUBLIC_URL + photo
-                      : photo
-                  }
-                  alt={title}
-                />
+                <img src={photo} alt={title} className="img-fluid rounded" />
 
                 <div className="tour__info">
                   <h2>{title}</h2>
@@ -70,12 +73,8 @@ const TourDetails = () => {
                         className="ri-star-s-fill"
                         style={{ color: "var(--secondary-color)" }}
                       ></i>
-                      {avgRating === 0 ? null : avgRating}
-                      {totalRating === 0 ? (
-                        "Not rated"
-                      ) : (
-                        <span>({reviews?.length})</span>
-                      )}
+                      {avgRating === 0 ? "Not rated" : `${avgRating} `}
+                      {totalRating > 0 && <span>({reviews?.length})</span>}
                     </span>
 
                     <span>
@@ -98,6 +97,7 @@ const TourDetails = () => {
                       <i className="ri-group-line"></i> {maxGroupSize} people
                     </span>
                   </div>
+
                   <h5>Description</h5>
                   <p>{desc}</p>
                 </div>
@@ -108,7 +108,14 @@ const TourDetails = () => {
                   <Form onSubmit={submitHandler}>
                     <div className="d-flex align-items-center gap-3 mb-4 rating__group">
                       {[1, 2, 3, 4, 5].map((num) => (
-                        <span key={num} onClick={() => setTourRating(num)}>
+                        <span
+                          key={num}
+                          onClick={() => setTourRating(num)}
+                          style={{
+                            cursor: "pointer",
+                            color: tourRating >= num ? "orange" : "#aaa",
+                          }}
+                        >
                           {num}
                           <i className="ri-star-s-fill"></i>
                         </span>
@@ -131,26 +138,27 @@ const TourDetails = () => {
                     </div>
                   </Form>
 
-                  <ListGroup className="user__reviews">
+                  <ListGroup className="user__reviews mt-4">
                     {reviews?.map((review, index) => (
-                      <div className="review__item" key={index}>
+                      <div className="review__item d-flex gap-3" key={index}>
                         <img src={avatar} alt="User avatar" />
                         <div className="w-100">
                           <div className="d-flex align-items-center justify-content-between">
                             <div>
-                              <h5>muhib</h5>
+                              <h5>{review.name || "Anonymous"}</h5>
                               <p>
-                                {new Date("05-27-2025").toLocaleDateString(
+                                {new Date().toLocaleDateString(
                                   "en-US",
                                   options
                                 )}
                               </p>
                             </div>
                             <span className="d-flex align-items-center">
-                              5<i className="ri-star-s-fill"></i>
+                              {review.rating}
+                              <i className="ri-star-s-fill ms-1"></i>
                             </span>
                           </div>
-                          <h6>Amazing tour</h6>
+                          <h6>{review.text || "Amazing tour"}</h6>
                         </div>
                       </div>
                     ))}
