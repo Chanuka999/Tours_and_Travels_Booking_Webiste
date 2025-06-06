@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import Newsletter from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assest/images/avatar.jpg"; // Confirm path
-import Booking from "../Component/Booking/booking.jsx";
+import Booking from "../Component/Booking/Booking.jsx";
 import useFetch from './../hooks/useFetch.js'
 import { BASE_URL } from "../utils/config.js";
 
