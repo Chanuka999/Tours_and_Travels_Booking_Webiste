@@ -12,8 +12,8 @@ const app = express();
 const port = 4000;
 
 const corsOptions = {
-  origin: true,
-  Credential: true,
+  origin: "http://localhost:3000",
+  credentials: true,
 };
 
 // MongoDB connection (Compass/localhost)
