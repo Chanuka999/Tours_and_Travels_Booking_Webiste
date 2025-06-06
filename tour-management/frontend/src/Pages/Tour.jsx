@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CommonSection from "./../Shared/CommonSection";
+import CommonSection from "../Shared/CommonSection";
 // import tourData from '../assets/data/tours'
 import "../styles/tour.css";
 import TourCard from "./../Shared/TourCard";

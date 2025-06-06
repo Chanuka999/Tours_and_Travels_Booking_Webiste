@@ -55,11 +55,11 @@ const Login = () => {
       <Container>
         <Row>
           <Col lg="8" className="m-auto">
-            <div className="login_container d-flex justify-content-between">
-              <div className="login_img">
+            <div className="login__container d-flex justify-content-between">
+              <div className="login__img">
                 <img src={loginImg} alt="" />
               </div>
-              <div className="login_form">
+              <div className="login__form">
                 <div className="user">
                   <img src={userIcon} alt="" />
                 </div>
