@@ -113,3 +113,42 @@
   font-size: 2.3rem;
   margin-top: 1rem;
 }
+
+@media only screen and (max-width: 992px) {
+  .hero__content h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero__img-box {
+    display: none;
+  }
+
+  .hero__video-box {
+    display: block;
+  }
+  .services__title,
+  .featured_tour-title,
+  .gallery__title,
+  .testimonial__title,
+  .experience__content h2 {
+    font-size: 2rem;
+  }
+
+  .experience__img {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__content h1 {
+    font-size: 1.8rem;
+  }
+
+  .services__title,
+  .featured_tour-title,
+  .gallery__title,
+  .testimonial__title,
+  .experience__content h2 {
+    font-size: 1.5rem;
+  }
+}
