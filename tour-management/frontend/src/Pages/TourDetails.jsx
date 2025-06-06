@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
+import tourData from "../assest/data/tours.js";
 
 import Newsletter from "../Shared/Newsletter";
 import calculateAvgRating from "../utils/avgRating";
