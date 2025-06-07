@@ -6,22 +6,22 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "ajv": "^6.12.6",
-    "ajv-keywords": "^3.5.2",
+    "@testing-library/user-event": "^14.6.1",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "bootstrap": "^5.3.6",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-responsive-masonry": "^2.7.1",
-    "react-router-dom": "^7.5.3",
+    "react-router-dom": "^7.6.2",
     "react-script": "^2.0.5",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.30.3",
     "reactstrap": "^9.2.3",
     "remixicon": "^4.6.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^5.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^9.28.0"
   }
 }
