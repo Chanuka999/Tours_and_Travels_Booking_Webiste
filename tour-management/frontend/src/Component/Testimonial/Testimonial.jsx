@@ -38,15 +38,18 @@ const Testimonial = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          fuga accusantium delectus sunt deleniti molestiae alias. Saepe at
-          blanditiis enim. Hic maiores ducimus repellat voluptatum nam.
-          Accusantium et modi quo.
+          I started this journey with a backpack, a camera, and a dream to help
+          people explore the world. After visiting 30+ countries, I realized how
+          hard it is to find authentic, safe, and affordable travel experiences.
+          That’s why I created this platform — to make travel easier, more
+          personal, and more unforgettable for you. Whether it’s the snow-capped
+          Himalayas or the beaches of Bali, we’re here to make your dream trip a
+          reality.
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
           <img src={ava01} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h5 className="mb-0 mt-3">john Doe</h5>
+            <h5 className="mb-0 mt-3">joe miller</h5>
             <p>Customer</p>
           </div>
         </div>
@@ -54,15 +57,16 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          fuga accusantium delectus sunt deleniti molestiae alias. Saepe at
-          blanditiis enim. Hic maiores ducimus repellat voluptatum nam.
-          Accusantium et modi quo.
+          Travel is not just about destinations, it’s about memories. My job is
+          to ensure every traveler smiles before, during, and after their
+          journey. From solving ticket issues to recommending hidden gems, I’m
+          here to make your travel stress-free. Your joy is our mission — feel
+          free to reach out any time!.
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
           <img src={ava02} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h5 className="mb-0 mt-3">john Doe</h5>
+            <h5 className="mb-0 mt-3">sandra</h5>
             <p>Customer</p>
           </div>
         </div>
@@ -70,15 +74,16 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          fuga accusantium delectus sunt deleniti molestiae alias. Saepe at
-          blanditiis enim. Hic maiores ducimus repellat voluptatum nam.
-          Accusantium et modi quo.
+          I believe the best travel stories happen off the beaten path. I work
+          with local guides, artists, and communities to bring you the most
+          unique experiences — like cooking with a Sri Lankan grandmother or
+          exploring secret jungle trails. When you travel with us, you don’t
+          just visit a place — you live it.
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
           <img src={ava03} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h5 className="mb-0 mt-3">john Doe</h5>
+            <h5 className="mb-0 mt-3">pitter</h5>
             <p>Customer</p>
           </div>
         </div>

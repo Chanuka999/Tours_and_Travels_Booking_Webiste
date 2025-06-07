@@ -33,10 +33,16 @@ const Home = () => {
                   <span className="highlight">memories</span>
                 </h1>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
-                  delectus iure dolores, dignissimos unde omnis quae eligendi
-                  veniam dolorem neque nobis sit enim repellat! Repellendus
-                  tempora rem vitae aperiam facilis.
+                  Discover, plan, and book unforgettable adventures with ease.
+                  At [Your Website Name], we bring the world to your fingertips
+                  — whether you're craving a tropical beach escape, a thrilling
+                  mountain trek, or a cultural city tour, we’ve got the perfect
+                  journey waiting for you.
+                  <br />
+                  <br />
+                  Start your next journey with confidence. Explore our best
+                  deals, customize your itinerary, and let us take care of the
+                  rest.
                 </p>
               </div>
             </Col>
@@ -98,11 +104,18 @@ const Home = () => {
                   we will serve you
                 </h2>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit
-                  <br /> corrupti iure explicabo quod dolores obcaecati facere
-                  voluptatum, totam iusto minus molestiae recusandae aperiam
-                  eius error delectus placeat ipsa neque praesentium!
+                  With over <b>5</b> years in the travel industry,{" "}
+                  <b>TOURS AND TRAVELS BOOKING</b> has proudly helped thousands
+                  of travelers explore the world with confidence and joy. Our
+                  journey began with a passion for adventure and a mission to
+                  make travel accessible, safe, and unforgettable for everyone
+                  <br />
+                  <br />
+                  Whether you’re booking your first trip or your fiftieth, our
+                  experienced team ensures every moment is planned to perfection
+                  — from the first click to your final destination.
+                  <br />
+                  Travel with experts. Travel with heart.
                 </p>
               </div>
               <div className="counter__wrapper d-flex align-items-center gap-5">
